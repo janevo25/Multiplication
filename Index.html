@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplication Table R</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<section class="container">
+    <h1>Multiplication Table</h1>
+    <h3>Create your own multiplication table that is rendered with an HTML table!</h3>
+
+    <div class="generate-box">
+        <div class="inputs">
+            <label for="rows" class="rows">Rows:
+                <input id="rows" type="number" value="10"  placeholder="How many rows?"/>
+            </label>
+
+            <label for="cols">Columns:
+                <input id="cols" type="number" value="10"  placeholder="How many columns?"/>
+            </label>
+
+            <label for="highlight" class="highlight">Highlight:
+            <input id="highlight" type="number" placeholder="Highlight rows & columns!"/>
+            </label>
+        </div>
+
+        <button id="generate" onclick="createWithHtmlTable(getRowsDesired(), getColumnsDesired())">Generate</button>
+    </div>
+
+    <div id="output"></div>
+</section>
+
+</body>
+<script src="javascript.js"></script>
+</html>
