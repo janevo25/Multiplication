@@ -2,10 +2,8 @@ section.container {
     width: 70vw;
     height: 100vh;
     margin: 0 auto;
-
-    h1, h3 {
-        font-family: "Big Caslon", cursive;
-    }
+    border: 1px solid black;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
 
     display: flex;
     flex-direction: column;
@@ -21,35 +19,39 @@ section.container {
             flex-direction: column;
             gap: 5px;
 
-            Label {
+            label {
                 display: flex;
                 gap: 10px;
                 justify-content: space-between;
-
             }
         }
 
-        button {
+        /*button {*/
+        /*#generate {*/
+        /*.myBtn {*/
+
+        button#generate.myBtn { /* has greatest specificity */
             background-color: pink;
         }
     }
-
 
     #output {
         overflow: scroll;
         max-width: 90vw;
         max-height: 60vh;
 
-        table, th, td {
+        table, th, tr, td {
             border: 1px solid black;
-            border-collapse: collapse;
+            border-collapse: collapse; /* Optional: to avoid double borders */
 
             tr:first-of-type,
-            td:last-of-type{
+            tr:last-of-type {
                 background-color: lightblue;
             }
-            tr:hover {
-                background-color: yellow;
+
+            .highlight {
+                background-color: darkred;
+                color: white;
             }
 
             td {
@@ -57,11 +59,14 @@ section.container {
                 text-align: center;
 
                 &:first-of-type,
-                &:last-of-type{
-                    background-color:lightblue;
+                &:last-of-type {
+                    background-color: lightblue;
                 }
             }
+        }
 
+        tr:hover {
+            background-color: yellow;
         }
     }
 }
